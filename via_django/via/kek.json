@@ -1,0 +1,117 @@
+{
+  "_via_img_metadata": {
+    "http://127.0.0.1:8000/images/IMG_0406_1.png331820": {
+      "filename": "http://127.0.0.1:8000/images/IMG_0406_1.png",
+      "size": 331820,
+      "file_attributes": {},
+      "regions": {
+        "0": {
+          "shape_attributes": {
+            "name": "polygon",
+            "all_points_x": [
+              182,
+              153,
+              221,
+              336,
+              383,
+              398,
+              351,
+              445,
+              508,
+              498,
+              9,
+              6,
+              91,
+              176
+            ],
+            "all_points_y": [
+              193,
+              99,
+              0,
+              5,
+              62,
+              171,
+              225,
+              280,
+              371,
+              508,
+              501,
+              439,
+              256,
+              195
+            ]
+          },
+          "region_attributes": {}
+        }
+      },
+      "project": 1,
+      "edited_by": 1,
+      "edit_date": "2020-11-22T23:49:41.221135+03:00"
+    }
+  },
+  "_via_image_id_list": [
+    "http://127.0.0.1:8000/images/IMG_0406_1.png331820"
+  ],
+  "_via_settings": {
+    "ui": {
+      "image": {
+        "region_color": "__via_default_region_color__",
+        "region_label": "__via_region_id__",
+        "region_label_font": "10px Sans",
+        "on_image_annotation_editor_placement": "NEAR_REGION"
+      },
+      "image_grid": {
+        "img_height": 80,
+        "rshape_fill": "none",
+        "rshape_stroke": "yellow",
+        "show_image_policy": "all",
+        "show_region_shape": true,
+        "rshape_fill_opacity": 0.3,
+        "rshape_stroke_width": 2
+      },
+      "leftsidebar_width": 18,
+      "annotation_editor_height": 15,
+      "annotation_editor_fontsize": 0.7000000000000001
+    },
+    "core": {
+      "filepath": {},
+      "buffer_size": 18,
+      "default_filepath": ""
+    },
+    "project": {
+      "name": "via_project_21Nov2020_11h13m"
+    }
+  },
+  "_via_attributes": {
+    "file": {
+      "vozrast": {
+        "type": "text",
+        "description": "age",
+        "default_value": "8"
+      },
+      "koteyka?": {
+        "type": "checkbox",
+        "options": {
+          "no": "no kotey",
+          "yes": "has kotey"
+        },
+        "description": "is this a koteyka or not",
+        "default_options": {
+          "yes": true
+        }
+      },
+      "osveshennost": {
+        "type": "radio",
+        "options": {
+          "temno": "",
+          "svetlo": ""
+        },
+        "description": "",
+        "default_options": {
+          "svetlo": true
+        }
+      }
+    },
+    "region": {}
+  }
+}
