@@ -40,6 +40,9 @@ class ProjectViewSet(viewsets.GenericViewSet,
     permission_classes = [permissions.IsAuthenticated]
 
     def update(self, request, *args, **kwargs):
+        if not request.user.has_perm('via.change_project'):
+            raise PermissionDenied("You have no write access")
+
         try:
             project = self.get_object()
             project.attributes = request.data.get("attributes")
