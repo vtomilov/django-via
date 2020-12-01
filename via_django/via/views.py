@@ -7,6 +7,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views import generic
 from rest_framework import viewsets, permissions
+from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
 
 from .models import Project, Image
@@ -74,13 +75,12 @@ class ImageViewSet(viewsets.GenericViewSet,
         for f in request.data.getlist('images'):
             i = Image.objects.create(filename=f, project=project)
             result.append(i)
-        try:
-            serializer = self.get_serializer(result, many=True)
-            return Response(serializer.data)
-        except Exception as e:
-            print(e)
+        serializer = self.get_serializer(result, many=True)
+        return Response(serializer.data)
 
     def update(self, request, *args, **kwargs):
+        if not request.user.has_perm('via.change_image'):
+            raise PermissionDenied("You have no write access")
         try:
             image = self.get_object()
             image.regions = request.data.get("regions")

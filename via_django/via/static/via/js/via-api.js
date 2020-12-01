@@ -142,7 +142,9 @@ function save_image(image_id, no_refresh) {
             show_message(`Image has been saved on server`);
             if (!no_refresh) refresh_img_metadata();
         },
-        error: console.error,
+        error: function (data) {
+            show_message(`ERROR: Unable to save image: ${data.responseJSON.detail}`);
+        },
     });
 }
 
