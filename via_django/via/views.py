@@ -84,7 +84,6 @@ class ImageViewSet(viewsets.GenericViewSet,
         try:
             image = self.get_object()
             image.regions = request.data.get("regions")
-            print(f"updating image with regions {image.regions}")
             image.file_attributes = request.data.get("file_attributes")
             image.edited_by = request.user
             image.edit_date = datetime.now()

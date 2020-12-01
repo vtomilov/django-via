@@ -123,15 +123,11 @@ function load_project(project_id, error_callback) {
 function save_image(image_id, no_refresh) {
     console.log("saving image with id", image_id);
     console.log("regions", _via_img_metadata[image_id].regions);
-    let regions = [];
-    for (let i = 0; i < _via_img_metadata[image_id].regions.length; i++) {
-        regions.push(_via_img_metadata[image_id].regions[i]);
-    }
 
     $.ajax({
         url: `/api/image/${_via_img_metadata[image_id].id}/`,
         data: JSON.stringify({
-            regions: regions,
+            regions: _via_img_metadata[image_id].regions,
             file_attributes: _via_img_metadata[image_id].file_attributes,
         }),
         type: 'PATCH',
